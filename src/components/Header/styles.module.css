@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    height: 7vh;
+    background-color: cadetblue;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+header .right {
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+}

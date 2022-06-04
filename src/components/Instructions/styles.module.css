@@ -1,0 +1,16 @@
+article {
+    display: flex;
+    height: 14vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+article .instructions {
+    width: 40vw;
+    padding-right: 3vw;
+}
+
+article .instructions section {
+    font-weight: 700;
+}

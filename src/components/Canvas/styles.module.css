@@ -1,0 +1,7 @@
+main {
+    display: grid;
+    width: 35vw;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}

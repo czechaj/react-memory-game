@@ -1,0 +1,20 @@
+  .card {
+      background-color: cadetblue;
+      width: 130px;
+      height: 130px;
+      margin: 1rem;
+      transition: all ease-in-out .8s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .card:hover {
+      transform: rotate(360deg);
+      box-shadow: 10px 10px 10px;
+  }
+
+  .card img {
+      width: 100px;
+      height: 100px;
+  }
