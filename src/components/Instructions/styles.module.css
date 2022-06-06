@@ -11,6 +11,27 @@ article .instructions {
     padding-right: 3vw;
 }
 
-article .instructions section {
+article .instructions .scoreboard {
     font-weight: 700;
+}
+
+
+.restart {
+    padding: .6rem .8rem;
+    border: none;
+    border-radius: .7rem;
+    transition: all .3s ease-in;
+    background-color: rgb(228, 218, 218, .5);
+}
+
+.restart:hover {
+    background-color: black;
+    color: rgb(169, 174, 177);
+}
+
+@media screen and (max-width: 600px) {
+
+    article .instructions .rules {
+        display: none
+    }
 }

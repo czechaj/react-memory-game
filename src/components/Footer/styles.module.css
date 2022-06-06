@@ -1,19 +1,46 @@
 footer {
+    display: flex;
     position: fixed;
     width: 100%;
     bottom: 0;
     background-color: cadetblue;
-    display: flex;
     align-items: center;
-
+    height: 4vh;
+    font-family: 'Special Elite', cursive;
+    justify-content: space-between;
 }
 
-footer summary {
+footer .summary {
     text-align: left;
-    padding-left: 3vw;
-    width: 37vw;
+    padding-left: 2vw;
+    width: 41vw;
+    color: black;
+}
+
+.summary a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
 }
 
 footer .links {
     display: flex;
+    justify-content: center;
+    margin-right: 2vw;
+}
+
+.link_btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.link_btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link_btn ion-icon {
+    font-size: 1.6rem;
+    pointer-events: none;
 }

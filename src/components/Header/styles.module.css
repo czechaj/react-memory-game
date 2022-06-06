@@ -2,13 +2,19 @@ header {
     display: flex;
     height: 7vh;
     background-color: cadetblue;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-
+    color: black;
+    font-family: 'Special Elite', cursive;
 }
 
-header .right {
-    width: 40vw;
+header .left {
+    font-weight: 700;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.brand {
+    margin-bottom: .5rem;
 }

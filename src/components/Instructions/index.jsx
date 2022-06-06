@@ -7,16 +7,20 @@ function Instructions() {
   const handleClick = () => {
     setGameOver(!gameOver);
   };
+
   return (
     <article>
       <aside className={styles.instructions}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos veniam
-        sapiente sunt eos deserunt debitis dolorum reiciendis placeat!
-        <section>Score: {score}</section>
-        <section>Moves: {moves}</section>
+        <section className={styles.rules}>
+          You will earn 50 points for pairs and lose 20 for fails!
+        </section>
+        <section className={styles.scoreboard}>Score: {score}</section>
+        <section className={styles.scoreboard}>Moves: {moves}</section>
       </aside>
       <aside>
-        <button onClick={handleClick}>Restart</button>
+        <button className={styles.restart} onClick={handleClick}>
+          Restart
+        </button>
       </aside>
     </article>
   );

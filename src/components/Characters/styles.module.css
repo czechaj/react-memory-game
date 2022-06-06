@@ -1,7 +1,7 @@
 .card {
     background-color: cadetblue;
-    width: 130px;
-    height: 130px;
+    width: 8rem;
+    height: 8rem;
     margin: 1rem;
     transition: all ease-in-out 0.8s;
     display: flex;
@@ -17,9 +17,13 @@
 
 }
 
+.success {
+    background-color: #6cc070
+}
+
 .card .char_img {
-    width: 100px;
-    height: 100px;
+    width: 6rem;
+    height: 6rem;
     animation-name: showPic;
     animation-duration: 1200ms;
 }
@@ -28,16 +32,43 @@
 
     0%,
     30% {
-        width: 0px;
+        width: 0rem;
     }
 
     70%,
     100% {
-        width: 100px;
+        width: 6rem;
     }
 }
 
 .card .default_img {
-    width: 190px;
-    height: 190px;
+    width: 12rem;
+    height: 12rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    .card {
+        width: 6.7rem;
+        height: 6.7rem;
+        margin: 0 0 .7rem 0;
+    }
+
+    .card .char_img {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    @keyframes showPic {
+
+        0%,
+        30% {
+            width: 0rem;
+        }
+
+        70%,
+        100% {
+            width: 5.5rem;
+        }
+    }
 }

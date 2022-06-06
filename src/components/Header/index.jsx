@@ -3,11 +3,9 @@ import styles from "./styles.module.css";
 function Header() {
   return (
     <header>
-      <div className="left">MemoryGame</div>
-      <div className={styles.right}>
-        {" "}
-        <span>Saepe, molestiae?</span>
-        <span>Soluta, voluptates!</span>
+      <div className={styles.left}>
+        <div className={styles.brand}>The Office</div>
+        <div>Memory Game</div>
       </div>
     </header>
   );

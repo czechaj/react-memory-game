@@ -45,16 +45,19 @@ const CardsProvider = ({ children }) => {
   const compare = useCallback(
     (arr) => {
       if (arr.length > 1) {
+        const selectedCard1 = document.querySelector(`.card${arr[0].id}`);
+        const selectedCard2 = document.querySelector(`.card${arr[1].id}`);
         if (arr[1].name === arr[0].name) {
           setPairs((prev) => {
             return [...prev, { 1: currentlyOpen[0], 2: currentlyOpen[1] }];
           });
           setScore((score) => score + 50);
+          selectedCard1.classList.add(`${styles.success}`);
+          selectedCard2.classList.add(`${styles.success}`);
         } else {
           arr[0].isVisible = false;
           arr[1].isVisible = false;
-          const selectedCard1 = document.querySelector(`.card${arr[0].id}`);
-          const selectedCard2 = document.querySelector(`.card${arr[1].id}`);
+
           selectedCard1.classList.toggle(`${styles.front}`);
           selectedCard2.classList.toggle(`${styles.front}`);
           setScore((score) => score - 20);
@@ -76,6 +79,7 @@ const CardsProvider = ({ children }) => {
     const cards = document.getElementsByClassName(`${styles.card}`);
     for (let i = 0; i < cards.length; i++) {
       cards[i].classList.remove(`${styles.front}`);
+      cards[i].classList.remove(`${styles.success}`);
     }
   }, [shuffle]);
 
@@ -86,6 +90,7 @@ const CardsProvider = ({ children }) => {
   useEffect(() => {
     setItems(shuffle(imageBox));
   }, [shuffle]);
+
   useEffect(() => {
     restart();
   }, [gameOver, restart]);
@@ -94,14 +99,11 @@ const CardsProvider = ({ children }) => {
     items,
     setItems,
     moves,
-    setMoves,
     score,
-    setScore,
     pairs,
     setPairs,
     currentlyOpen,
     setCurrentlyOpen,
-    compare,
     selectCard,
     shuffle,
     gameOver,
