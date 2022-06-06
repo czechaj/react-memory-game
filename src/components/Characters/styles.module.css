@@ -1,20 +1,43 @@
-  .card {
-      background-color: cadetblue;
-      width: 130px;
-      height: 130px;
-      margin: 1rem;
-      transition: all ease-in-out .8s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
+.card {
+    background-color: cadetblue;
+    width: 130px;
+    height: 130px;
+    margin: 1rem;
+    transition: all ease-in-out 0.8s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+}
 
-  .card:hover {
-      transform: rotate(360deg);
-      box-shadow: 10px 10px 10px;
-  }
+.front {
+    transform: rotateY(180deg);
+    background-color: rgb(160, 194, 194);
 
-  .card img {
-      width: 100px;
-      height: 100px;
-  }
+}
+
+.card .char_img {
+    width: 100px;
+    height: 100px;
+    animation-name: showPic;
+    animation-duration: 1200ms;
+}
+
+@keyframes showPic {
+
+    0%,
+    30% {
+        width: 0px;
+    }
+
+    70%,
+    100% {
+        width: 100px;
+    }
+}
+
+.card .default_img {
+    width: 190px;
+    height: 190px;
+}

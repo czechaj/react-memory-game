@@ -1,12 +1,15 @@
 import React from "react";
-import styles from "./styles.module.css";
-import box from "../../data/imageMap";
+import "./styles.module.css";
 import Characters from "../Characters";
+import { useCards } from "../../contexts/CardsContext";
+
 function Canvas() {
+  const { items } = useCards();
+
   return (
     <main>
-      {box.map((char) => {
-        return <Characters char={char} />;
+      {items.map((char) => {
+        return <Characters item={char} key={char.id} />;
       })}
     </main>
   );
