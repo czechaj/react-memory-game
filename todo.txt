@@ -1,0 +1,4 @@
+iPhone
+- footer links arent working 
+- nonvisible.png isnt seem in correct size
+- rotateY function doesnt seem good

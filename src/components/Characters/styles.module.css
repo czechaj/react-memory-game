@@ -3,7 +3,7 @@
     width: 8rem;
     height: 8rem;
     margin: 1rem;
-    transition: all ease-in-out 0.8s;
+    transition: all ease-in-out 0.6s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,6 @@
 .front {
     transform: rotateY(180deg);
     background-color: rgb(160, 194, 194);
-
 }
 
 .success {
@@ -24,8 +23,7 @@
 .card .char_img {
     width: 6rem;
     height: 6rem;
-    animation-name: showPic;
-    animation-duration: 1200ms;
+    animation: showPic 1.2s;
 }
 
 @keyframes showPic {
@@ -46,17 +44,23 @@
     height: 12rem;
 }
 
+
+
 @media screen and (max-width: 800px) {
 
     .card {
         width: 6.7rem;
         height: 6.7rem;
         margin: 0 0 .7rem 0;
+        transition: all ease-in-out .6s;
+        -webkit-transition: all ease-in-out .6s;
     }
 
     .card .char_img {
         width: 5.5rem;
         height: 5.5rem;
+        animation: showPic 1.2s;
+        -webkit-animation: showPic 1.1s;
     }
 
     @keyframes showPic {
@@ -70,5 +74,10 @@
         100% {
             width: 5.5rem;
         }
+    }
+
+    .card .default_img {
+        width: 11rem;
+        height: 11rem;
     }
 }
